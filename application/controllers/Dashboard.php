@@ -11,4 +11,8 @@
      public function index() {
          $this->load->view('account/v_dashboard');
      }
+
+     public function profil() {
+        $this->load->view('account/v_member');
+    }
  }

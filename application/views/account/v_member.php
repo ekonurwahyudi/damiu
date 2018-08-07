@@ -38,7 +38,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./dashboard/profil  ">
+            <a class="nav-link" href="./profil.html">
               <i class="material-icons">person</i>
               <p>Profil Saya</p>
             </a>
@@ -111,130 +111,77 @@
       </nav>
       <!-- End Navbar -->
       <div class="content">
+	  <div class="content">
         <div class="container-fluid">
           <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-danger card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">calendar_today</i>
-                  </div>
-                  <p class="card-category">Tanggal</p>
-                  <h3 class="card-title">03 Augs 2018</h3>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Profile</h4>
+                  <p class="card-category">Complete your profile</p>
                 </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">date_range</i> kelender
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">face</i>
-                  </div>
-                  <p class="card-category">penjualan Hari Ini</p>
-                  <h3 class="card-title">48
-                    <small>Galon</small>
-                  </h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">timeline</i>
-                    <a href="#pablo">Lihat lebih lanjut</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-success card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">account_balance_wallet</i>
-                  </div>
-                  <p class="card-category">Estimasi keuntuangan</p>
-                  <h3 class="card-title">Rp. 233.000</h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">update</i>
-                    <a href="#pablo">Lihat lebih lanjut</a>
-                  </div>
+                <div class="card-body">
+                  <form>
+				  <div class="row">
+	                                        <div class="col-md-12">
+												<div class="form-group label-floating">
+													<label class="control-label">Nama Lengkap</label>
+													<input type="text" class="form-control" name="name" value="<?php echo ucfirst($this->session->userdata('nama')); ?>">
+													
+												</div>
+	                                        </div>
+	                                    </div>
+
+	                                    <div class="row">
+	                                        <div class="col-md-12">
+												<div class="form-group label-floating">
+													<label class="control-label">Email</label>
+													<input type="text" class="form-control" name="email" value="<?php echo ucfirst($this->session->userdata('email')); ?>">
+												</div>
+	                                        </div>
+										</div>
+										<div class="row">
+	                                        <div class="col-md-12">
+												<div class="form-group label-floating">
+													<label class="control-label">Nomor HP</label>
+													<input type="text" class="form-control" name="email" value="<?php echo ucfirst($this->session->userdata('nomorhp')); ?>">
+												</div>
+	                                        </div>
+										</div>
+										<div class="row">
+	                                        <div class="col-md-12">
+												<div class="form-group label-floating">
+													<label class="control-label">Jabatan</label>
+													<input type="text" class="form-control" name="email" value="<?php echo ucfirst($this->session->userdata('jabatan')); ?>">
+												</div>
+	                                        </div>
+	                                    </div>
+
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-info card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">layers</i>
-                  </div>
-                  <p class="card-category">Total Penjualan</p>
-                  <h3 class="card-title">245 <small>Galon</small></h3>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                  </a>
                 </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">update</i> Lihat lebih lanjut
-                  </div>
+                <div class="card-body">
+                  <h6 class="card-category text-gray"><?php echo ucfirst($this->session->userdata('jabatan')); ?></h6>
+                  <h4 class="card-title"><?php echo ucfirst($this->session->userdata('nama')); ?></h4>
+                  <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-success">
-                  <div class="ct-chart" id="dailySalesChart"></div>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Penjualan Harian</h4>
-                  <p class="card-category">
-                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Peningkatan penjualan hari ini.</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 menit yang lalu
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-warning">
-                  <div class="ct-chart" id="websiteViewsChart"></div>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Penjualan Mingguan</h4>
-                  <p class="card-category">
-                  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 12% </span> Peningkatan penjualan minggu ini.</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 menit yang lalu
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-chart">
-                <div class="card-header card-header-danger">
-                  <div class="ct-chart" id="completedTasksChart"></div>
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Penjualan Bulanan</h4>
-                  <p class="card-category">
-                  <span class="text-warning"><i class="fa fa-long-arrow-down"></i> 7% </span> Peningkatan penjualan bulan ini.</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> updated 4 menit yang lalu
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+</div>
+
       <footer class="footer">
             &copy;
             <script>
